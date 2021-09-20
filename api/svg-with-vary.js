@@ -2,8 +2,8 @@ const svg = `<svg height="32" version="1.0" width="32" xmlns="http://www.w3.org/
 
 module.exports = (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Headers', 'GET');
+  res.setHeader('Access-Control-Allow-Headers', 'GET, HEAD');
   res.setHeader('Content-Type', 'image/svg+xml');
-  res.setHeader('Vary', 'SomeUnknownHeader');
+  res.setHeader('Vary', 'Origin, Access-Control-Request-Headers, Access-Control-Request-Method, Accept-Encoding');
   res.send(svg);
 };
