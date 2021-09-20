@@ -4,6 +4,6 @@ module.exports = (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'GET');
   res.setHeader('Content-Type', 'image/svg+xml');
-  res.setHeader('Vary', 'Origin, Access-Control-Request-Headers, Access-Control-Request-Method');
+  res.setHeader('Vary', 'Origin');
   res.send(svg);
 };
